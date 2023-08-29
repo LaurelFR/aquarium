@@ -1,19 +1,73 @@
-html,
-body {
-  margin: 0;
-  min-height: 100%;
-  background-color: #114882;
+.ocean {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding-top: 80px;
+  height: 600px;
+  border-radius: 90px;
+  background: linear-gradient(
+    89.8deg,
+    rgb(39, 115, 255) 4.3%,
+    rgb(62, 211, 232) 101.4%
+  );
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-/* waves from https://unused-css.com/blog/css-wave-animation/*/
+.ocean-floor {
+  max-width: 1000px;
+  height: 400px;
+  margin-top: 150px;
+  background: radial-gradient(
+    859px at 10% 20%,
+    rgb(245, 220, 154) 0%,
+    rgb(164, 78, 51) 90%
+  );
+}
+
+.fish-one {
+  font-size: 70px;
+  color: blueviolet;
+  margin-bottom: 60px;
+  animation: swim 6s -3s linear infinite;
+}
+
+.fish-two {
+  font-size: 70px;
+  color: red;
+  margin-bottom: 30px;
+  animation: swim 10s -3s linear infinite;
+}
+
+.fish-three {
+  font-size: 70px;
+  color: yellow;
+  margin-bottom: 30px;
+  animation: swim 14s -3s linear infinite;
+}
+
+@keyframes swim {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(750px);
+  }
+  100% {
+    transform: translateX(1400px);
+  }
+}
+
+/*
+
 .ocean {
-  height: 100px; /* change the height of the waves here */
+  height: 100px; 
   width: 100%;
   position: absolute;
   bottom: 10;
   left: 0;
   right: 0;
   overflow-x: hidden;
+  z-index: 0;
 }
 
 .under {
@@ -55,3 +109,6 @@ body {
     transform: translateX(-50%);
   }
 }
+
+
+*/
